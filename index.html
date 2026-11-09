@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marc Colbert Marc Colbert Picsart Academy — Formation en infographie</title>
+<style>
+:root{--navy:#17152f;--purple:#6428e8;--pink:#ed36a5;--blue:#358bff;--ink:#171936;--muted:#66708b;--bg:#f4f6ff;--card:#fff;--line:#e4e8f5}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+header{height:76px;background:linear-gradient(100deg,#17132f,#302080);color:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 26px;position:sticky;top:0;z-index:10;box-shadow:0 5px 18px #1b164322}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:21px}.logo{width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,#21c9ff,#8b36f5,#ef35b3);display:grid;place-items:center;font-size:28px;font-weight:900}
+nav{display:flex;gap:20px;align-items:center}nav a{color:#eee;text-decoration:none;font-size:14px;cursor:pointer}nav a:hover{color:#ff83d2}
+.layout{display:grid;grid-template-columns:225px 1fr;min-height:calc(100vh - 76px)}
+aside{background:#1c1b36;color:#fff;padding:22px 14px;display:flex;flex-direction:column;gap:8px}
+.side{padding:13px 15px;border-radius:10px;color:#e5e5f5;cursor:pointer;display:flex;gap:12px;align-items:center;font-size:14px}.side:hover,.side.active{background:linear-gradient(90deg,#612be7,#813cf5);color:white}
+.asidebox{margin-top:auto;background:#111128;border-radius:14px;padding:18px 14px;text-align:center;line-height:1.5}.asidebox .trophy{font-size:38px}
+main{padding:22px;max-width:1600px;width:100%;margin:auto}
+.hero{border-radius:18px;background:linear-gradient(110deg,#29126d,#5425d9 48%,#308aff);color:white;padding:30px 34px;display:flex;align-items:center;justify-content:space-between;min-height:245px;overflow:hidden;position:relative}
+.hero h1{font-size:clamp(27px,3vw,42px);line-height:1.12;margin:0 0 12px;max-width:620px}.hero p{font-size:18px;line-height:1.5;max-width:600px;margin:0 0 22px;color:#f0eaff}
+.hero-art{font-size:100px;filter:drop-shadow(0 10px 10px #1114);padding:0 30px}
+.btn{border:0;border-radius:10px;padding:12px 17px;background:linear-gradient(90deg,#ed2ca6,#a327ed);color:white;font-weight:700;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px}.btn:hover{filter:brightness(1.08)}.btn.secondary{background:#fff;color:#5e27dd;border:1px solid #d9d1ff}.btn.small{padding:9px 12px;font-size:13px}
+.columns{display:grid;grid-template-columns:minmax(0,1fr) 235px;gap:16px;margin-top:18px}
+.section-title{display:flex;justify-content:space-between;align-items:end;margin:8px 0 14px}.section-title h2{margin:0;font-size:23px}.section-title p{margin:5px 0 0;color:var(--muted);font-size:14px}
+.modules{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:13px;box-shadow:0 4px 13px #2b267008}
+.module{display:flex;gap:12px;min-height:155px}.thumb{width:94px;min-width:94px;border-radius:10px;display:grid;place-items:center;font-size:45px;color:white;background:linear-gradient(135deg,#00c4b5,#2878f8);overflow:hidden}.thumb.pink{background:linear-gradient(135deg,#f6a5d8,#7125dd)}.thumb.orange{background:linear-gradient(135deg,#ffbd48,#f15b4a)}.thumb.blue{background:linear-gradient(135deg,#52d8ff,#173c9a)}.thumb.green{background:linear-gradient(135deg,#64e3b4,#168a83)}
+.module h3{font-size:15px;margin:8px 0 6px}.module p{font-size:12px;color:#59627c;line-height:1.45;margin:0 0 10px}.tag{font-size:11px;font-weight:700;color:white;background:#6431e9;border-radius:20px;padding:5px 9px;display:inline-block}.meta{display:flex;align-items:center;justify-content:space-between;gap:5px;font-size:12px;color:#66708b;margin-top:auto}
+.rightcol{display:flex;flex-direction:column;gap:13px}.progress{text-align:center;padding:18px}.progress h3,.rightcard h3{margin:0 0 14px;text-align:left;font-size:16px}.ring{width:118px;height:118px;border-radius:50%;margin:0 auto 12px;background:conic-gradient(#6b31e9 0%,#e9eaf5 0);display:grid;place-items:center;position:relative}.ring:before{content:"";position:absolute;inset:12px;background:#fff;border-radius:50%}.ring span{position:relative;font-size:23px;font-weight:800}.rightcard{padding:16px}.next{display:flex;gap:10px;align-items:center;font-size:13px;line-height:1.4}.nexticon{width:54px;height:65px;background:linear-gradient(135deg,#33c6ff,#9235ef);border-radius:9px;display:grid;place-items:center;color:white;font-size:25px}
+.resources a{display:flex;gap:10px;padding:8px 0;text-decoration:none;color:#303553;font-size:13px;cursor:pointer}.resources a:hover{color:#702ce8}
+.bottomcards{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px}.bannerbox{border-radius:14px;padding:20px;background:linear-gradient(110deg,#dce2ff,#b8c5ff);display:flex;align-items:center;justify-content:space-between;gap:15px}.bannerbox.purple{background:linear-gradient(110deg,#8b39f1,#d35bfa);color:#fff}.bannerbox h3{margin:0 0 7px}.bannerbox p{font-size:13px;margin:0 0 10px}
+footer{background:#17152f;color:#ddd;padding:22px 28px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:13px}
+.contact-buttons{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+footer .btn{white-space:nowrap}
+.page{display:none}.page.active{display:block}
+.lessonwrap{display:grid;grid-template-columns:260px 1fr;gap:18px;margin-top:18px}.lessonnav button{display:block;width:100%;text-align:left;border:0;background:transparent;padding:12px;border-radius:9px;cursor:pointer;color:#323650}.lessonnav button.active,.lessonnav button:hover{background:#eee8ff;color:#6326e7;font-weight:700}.lessoncontent{padding:25px;line-height:1.7}.lessoncontent h2{margin-top:0}.lessoncontent h3{margin-top:24px}.lessoncontent ul{padding-left:22px}.callout{background:#f2edff;border-left:4px solid #7434ed;padding:14px;border-radius:8px;margin:16px 0}
+.tpgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}.upload{border:2px dashed #c7c9df;border-radius:12px;padding:22px;text-align:center;background:#fafaff}.upload input{max-width:100%}.preview{max-width:100%;max-height:260px;margin:12px auto;display:block;border-radius:10px}
+.quiz label{display:block;background:#f7f7ff;padding:12px;margin:8px 0;border-radius:8px;cursor:pointer}.quiz input{margin-right:8px}
+.notice{color:var(--muted);font-size:13px}
+@media(max-width:1150px){.modules{grid-template-columns:repeat(2,minmax(0,1fr))}.columns{grid-template-columns:1fr}.rightcol{display:grid;grid-template-columns:repeat(3,1fr)}.hero-art{font-size:70px}}
+@media(max-width:760px){header{padding:0 14px}nav{display:none}.layout{grid-template-columns:1fr}aside{display:none}main{padding:13px}.hero{padding:23px;min-height:auto}.hero-art{display:none}.columns{display:block}.rightcol{grid-template-columns:1fr 1fr;margin-top:15px}.modules{grid-template-columns:1fr}.bottomcards,.tpgrid,.lessonwrap{grid-template-columns:1fr}.section-title h2{font-size:20px}.module{min-height:145px}.rightcol .resources{grid-column:1/-1}}
+
+.adminlogin{max-width:460px;margin:25px auto;padding:25px}.adminlogin input,.adminform input,.adminform select{width:100%;padding:11px;border:1px solid #d9dced;border-radius:8px;margin:7px 0 13px;font:inherit}
+.adminform{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.adminform label{font-size:13px;color:#59627c}
+.adminlist{width:100%;border-collapse:collapse;font-size:13px}.adminlist th,.adminlist td{padding:10px;border-bottom:1px solid #e7e9f3;text-align:left}.adminlist th{background:#f5f3ff}
+.cert{background:#fffdf9;border:10px solid #c9a34c;padding:32px;min-height:500px;text-align:center;color:#3b251c;font-family:Georgia,serif}
+.certbrand{font-weight:bold;color:#183d9c;font-size:19px}.certtitle{font-size:clamp(32px,5vw,60px);color:#ad1118;font-weight:bold;margin:20px 0}.certsubtitle{font-size:clamp(15px,2.5vw,25px);font-style:italic;font-weight:bold}.certname{font-size:clamp(28px,4vw,48px);font-style:italic;color:#b30b20;margin:28px 0;border-bottom:3px solid #c9a34c;padding-bottom:12px}.certtext{font-size:17px;line-height:1.6}.certbottom{display:flex;justify-content:space-between;align-items:end;margin-top:50px;gap:20px}.seal{width:118px;height:118px;border:4px double #163ab5;color:#163ab5;border-radius:50%;padding:12px 8px;font-weight:bold;display:flex;flex-direction:column;align-items:center;justify-content:center;outline:1px solid #163ab5;outline-offset:4px;font-size:13px;line-height:1.2;transform:rotate(-8deg);text-align:center}.seal small{font-size:9px;letter-spacing:1px}.signature{min-width:190px;padding-top:5px;text-align:center;font-weight:bold}.signature .scribble{font-family:"Segoe Script","Brush Script MT",cursive;font-size:31px;font-weight:500;font-style:italic;color:#172b75;line-height:1.2;transform:rotate(-7deg);display:block;border-bottom:1px solid #222;padding:0 8px 5px}.adminstats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:15px}.stat{background:#f4f0ff;border-radius:12px;padding:16px}.stat strong{display:block;font-size:25px;color:#6428e8}
+@media(max-width:700px){.adminform{grid-template-columns:1fr}.cert{padding:20px}.certbottom{margin-top:25px}.adminstats{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+ <div class="brand"><div class="logo">p</div><div>Marc Colbert Picsart Academy</div></div>
+ <nav><a onclick="showPage('home')">⌂ Accueil</a><a onclick="showPage('courses')">▣ Cours</a><a onclick="showPage('tp')">✎ Travaux pratiques</a><a onclick="showPage('resources')">◇ Ressources</a><a onclick="showPage('quiz')">☑ Évaluations</a><a onclick="showPage('admin')">🎓 Certificats</a><a onclick="showPage('admin')">⚙ Administration</a></nav>
+ 
+</header>
+<div class="layout">
+<aside>
+ <div class="side active" onclick="showPage('home',this)">⌂ Tableau de bord</div>
+ <div class="side" onclick="showPage('courses',this)">▣ Mes cours</div>
+ <div class="side" onclick="showPage('tp',this)">✎ Mes TP</div>
+ <div class="side" onclick="showPage('quiz',this)">▥ Mes résultats</div>
+ <div class="side" onclick="showPage('project',this)">🏆 Projet final</div>
+ <div class="side" onclick="showPage('resources',this)">▤ Ressources</div><a class="side" onclick="showPage('admin')" style="text-decoration:none;cursor:pointer">🎓 Certificats</a>
+  <div class="side" onclick="showPage('admin',this)">⚙ Administration</div>
+ <div class="asidebox"><div class="trophy">🏆</div><b>Atteignez vos objectifs !</b><p style="font-size:13px">Maîtrisez Picsart et créez des visuels professionnels pour votre site web.</p><button class="btn small" onclick="showPage('courses')">Commencer →</button></div>
+</aside>
+<main>
+<section id="home" class="page active">
+<div class="hero"><div><h1>Formation en <span style="color:#ff79d6">infographie</span><br>avec Picsart</h1><p>Concevez, retouchez et créez des visuels professionnels pour votre site web.</p><button class="btn" onclick="showPage('courses')">▶ Commencer la formation</button></div><div class="hero-art">🎨 💻</div></div>
+<div class="columns"><div>
+<div class="section-title"><div><h2>📖 Parcours de formation</h2><p>6 chapitres pour progresser en création graphique avec Picsart</p></div></div>
+<div class="modules" id="moduleCards"></div>
+<div class="bottomcards"><div class="bannerbox"><div><h3>🛠 Espace Travaux Pratiques</h3><p>Mettez en pratique vos connaissances avec des exercices guidés.</p><button class="btn small" onclick="showPage('tp')">Accéder aux TP →</button></div>📋</div><div class="bannerbox purple"><div><h3>⭐ Projet final</h3><p>Créez tous les éléments graphiques d'un site web.</p><button class="btn small secondary" onclick="showPage('project')">Voir le projet →</button></div>🏆</div></div>
+</div><div class="rightcol">
+<div class="card progress"><h3>Votre progression</h3><div class="ring" id="ring"><span id="percent">0%</span></div><b id="count">0 / 6 chapitres</b><p><button class="btn secondary small" onclick="showPage('courses')">Voir mon parcours →</button></p></div>
+<div class="card rightcard"><h3>Mon prochain cours</h3><div class="next"><div class="nexticon">🎨</div><div><b id="nexttitle">Chapitre 1</b><br><span id="nextname">Introduction à Picsart</span><p><button class="btn small" onclick="openLesson(0)">Accéder →</button></p></div></div></div>
+<div class="card rightcard resources"><h3>Ressources utiles</h3><a onclick="showPage('resources')">🌐 Tutoriels officiels</a><a onclick="showPage('resources')">▣ Modèles et fichiers</a><a onclick="showPage('tp')">⬇ Fichiers à télécharger</a><a onclick="showPage('quiz')">❓ Quiz et FAQ</a></div>
+</div></div>
+</section>
+
+<section id="courses" class="page">
+<div class="section-title"><div><h2>📚 Mes cours</h2><p>Choisissez un chapitre pour consulter les leçons et valider votre progression.</p></div></div>
+<div class="modules" id="courseCards"></div>
+<div class="card lessonwrap"><div class="lessonnav" id="lessonNav"></div><article class="lessoncontent" id="lessonContent"><h2>Bienvenue dans les cours</h2><p>Sélectionnez un chapitre pour commencer.</p></article></div>
+</section>
+
+<section id="tp" class="page">
+<div class="section-title"><div><h2>🛠 Espace de travaux pratiques</h2><p>Réalisez les exercices et déposez vos créations ici (aperçu local).</p></div></div>
+<div class="tpgrid" id="tpCards"></div>
+<div class="card" style="margin-top:16px;padding:22px"><h2>📤 Déposer une réalisation</h2><p>Choisissez un TP, puis ajoutez votre image pour afficher un aperçu. Le fichier reste sur votre appareil dans cette démonstration.</p>
+<label>Travail pratique : <select id="tpSelect"><option>TP 1 — Première création</option><option>TP 2 — Composition graphique</option><option>TP 3 — Retouche photo</option><option>TP 4 — Bannière web</option><option>TP 5 — Visuels de page d'accueil</option></select></label>
+<div class="upload" style="margin-top:15px"><p>Glissez une image ici ou sélectionnez un fichier</p><input type="file" id="fileInput" accept="image/*"><img id="preview" class="preview" hidden><p id="fileName" class="notice"></p><button class="btn" onclick="saveSubmission()">Enregistrer mon dépôt</button><p id="submitMsg" class="notice"></p></div>
+<h3>Mes dépôts</h3><div id="submissions" class="notice">Aucun dépôt pour le moment.</div></div>
+</section>
+
+<section id="resources" class="page">
+<div class="section-title"><div><h2>📎 Ressources pédagogiques</h2><p>Liens, fichiers de travail et supports utiles pour apprendre.</p></div></div>
+<div class="tpgrid">
+<div class="card" style="padding:22px"><h3>🌐 Tutoriels Picsart</h3><p>Consultez les guides et tutoriels officiels pour approfondir les outils.</p><a class="btn" target="_blank" rel="noopener" href="https://picsart.com/tutorials/">Ouvrir les tutoriels →</a></div>
+<div class="card" style="padding:22px"><h3>🖼️ Photo Editor</h3><p>Accéder à l'éditeur Picsart pour réaliser les activités.</p><a class="btn" target="_blank" rel="noopener" href="https://picsart.com/photo-editor/">Ouvrir Picsart →</a></div>
+<div class="card" style="padding:22px"><h3>🎨 Design</h3><p>Découvrir les outils de conception graphique.</p><a class="btn" target="_blank" rel="noopener" href="https://picsart.com/design/">Découvrir →</a></div>
+<div class="card" style="padding:22px"><h3>📐 Formats de travail</h3><p>Repères indicatifs : bannière 1920×600, image de section 1200×800, carré 1080×1080 pixels. À adapter au thème du site.</p></div>
+</div>
+</section>
+
+<section id="quiz" class="page">
+<div class="section-title"><div><h2>☑ Évaluation — Quiz de révision</h2><p>Testez vos connaissances. Une correction s'affiche à la fin.</p></div></div>
+<div class="card lessoncontent quiz"><form id="quizForm" style="margin-top:18px">
+<h3>1. Quel format peut conserver un arrière-plan transparent ?</h3><label><input type="radio" name="q1" value="a"> JPG</label><label><input type="radio" name="q1" value="b"> PNG</label><label><input type="radio" name="q1" value="c"> TXT</label>
+<h3>2. Quel principe facilite la lecture d'une affiche ?</h3><label><input type="radio" name="q2" value="a"> La hiérarchie visuelle</label><label><input type="radio" name="q2" value="b"> L'accumulation de textes</label><label><input type="radio" name="q2" value="c"> L'absence de contraste</label>
+<h3>3. Avant d'intégrer une image à un site, il est utile de…</h3><label><input type="radio" name="q3" value="a"> Ne jamais la redimensionner</label><label><input type="radio" name="q3" value="b"> Vérifier ses dimensions et son poids</label><label><input type="radio" name="q3" value="c"> Ajouter le maximum d'effets</label>
+<button class="btn" type="submit">Corriger le quiz</button></form><div id="quizResult"></div></div>
+</section>
+
+<section id="project" class="page">
+<div class="section-title"><div><h2>🏆 Projet final</h2><p>Concevoir l'identité graphique d'une page web avec Picsart.</p></div></div>
+<div class="card lessoncontent"><h2>Brief du projet</h2><p>Imaginez la page d'accueil d'un site de formation, d'un portfolio ou d'une activité. Créez un ensemble cohérent de visuels.</p><h3>Livrables</h3><ul><li>Un logo ou une signature visuelle</li><li>Une bannière d'accueil</li><li>Une image de présentation</li><li>Trois visuels de sections</li><li>Une couverture de page secondaire</li></ul><h3>Critères d'évaluation</h3><ul><li>Respect du brief et des formats</li><li>Lisibilité et hiérarchie</li><li>Harmonie des couleurs</li><li>Cohérence entre les visuels</li><li>Qualité et optimisation des exports</li></ul><div class="callout">Conseil : rassemblez vos fichiers dans un dossier nommé <b>Projet-Picsart</b>, avec des sous-dossiers Logo, Bannière, Sections et Exports.</div><button class="btn" onclick="showPage('tp')">Déposer mes créations →</button><button class="btn secondary" onclick="markProject()">Marquer le projet terminé</button><p id="projectMsg" class="notice"></p></div>
+</section>
+
+<section id="admin" class="page">
+<div class="section-title"><div><h2>⚙ Administration</h2><p>Gestion des apprenants et des certificats</p></div></div>
+<div id="adminGate" class="card adminlogin"><h2>Accès administrateur</h2><label>Code d'accès<input id="adminCode" type="password" placeholder="Code administrateur"><button class="btn secondary small" type="button" onclick="toggleAdminCode()" style="margin-top:4px">👁 Afficher</button></label><button class="btn" onclick="adminLogin()">Se connecter</button><p id="adminError" class="notice"></p></div>
+<div id="adminPanel" hidden>
+<div class="adminstats"><div class="stat">Apprenants<strong id="statUsers">0</strong></div><div class="stat">Comptes actifs<strong id="statOnline">0</strong></div><div class="stat">Certifiés<strong id="statCerts">0</strong></div></div>
+<div class="card" style="padding:20px;margin-bottom:15px"><h3>Ajouter un apprenant</h3><div class="adminform">
+<label>Nom complet<input id="studentName" placeholder="Nom et prénom"></label><label>Email<input id="studentEmail" type="email"></label>
+<label>Identifiant<input id="studentId" placeholder="APP-001"></label><label>Statut<select id="studentOnline"><option value="yes">Actif / inscrit</option><option value="no">Inactif</option></select></label>
+<label>Progression (%)<input id="studentProgress" type="number" min="0" max="100" value="100"></label><label>Formation<select id="studentCourse"><option>Infographie avec Picsart</option><option>Création graphique web avec Picsart</option></select></label><label>Date du certificat<input id="studentDate" type="date"></label></div><button class="btn" onclick="addStudent()">Enregistrer</button><button class="btn secondary" onclick="clearStudentForm()">Vider</button><p id="adminMsg"></p></div>
+<div class="card" style="padding:20px;margin-bottom:15px"><h3>Liste des apprenants et certificats</h3><p class="notice">Après les 6 chapitres et une note de 3/3 à l’évaluation finale, le certificat apparaît automatiquement ici. Seul l’administrateur connecté peut consulter cette liste.</p><div style="overflow:auto"><table class="adminlist"><thead><tr><th>Nom</th><th>Email</th><th>Compte</th><th>Progression</th><th>Certificat</th><th>Actions</th></tr></thead><tbody id="studentRows"></tbody></table></div></div>
+<div class="card" style="padding:20px"><h3>Aperçu du certificat</h3><div id="certificatePreview" class="cert"><div class="certbrand">MARC COLBERT PIERRE<br><span style="font-size:14px">Marc Colbert Picsart Academy</span></div><div class="certtitle">CERTIFICAT</div><div class="certsubtitle">de formation · Infographie avec Picsart</div><p class="certtext">Ce certificat est fièrement décerné à</p><div class="certname" id="certName">Nom de l'apprenant</div><p class="certtext" id="certDescription">pour avoir suivi le programme de formation, validé les modules et réussi le test final.</p><p id="certDate">Décerné le —</p><div class="certbottom"><div class="seal"><small>MARC COLBERT</small><b>MCP</b><span>✦</span><small>PICSART ACADEMY</small></div><div class="signature"><span class="scribble">Wadley Pierre</span><span style="font-weight:normal;font-size:13px">Administrateur</span></div></div></div><p><button class="btn" onclick="printCertificate()">Imprimer / enregistrer PDF</button></p></div>
+</div></section></main></div>
+<footer><div><b>🟣 Marc Colbert Picsart Academy</b><br></div><div>À propos　 |　 Mentions pédagogiques　 |　 FAQ</div>
+<div class="contact-buttons">
+<a class="btn small" href="https://wa.me/50932454603" target="_blank" rel="noopener" style="background:#25D366;color:#fff;border:0">WhatsApp</a>
+<a class="btn small secondary" href="mailto:pierrewadley025@gmail.com?subject=Contact%20-%20Marc%20Colbert%20Picsart%20Academy">Écrire un email</a>
+</div><div>© Marc Colbert Picsart Academy — <b>Wadley PIERRE</b></div></footer>
+<script>
+const modules=[
+{title:"Introduction à Picsart",desc:"Découvrez l'interface et les fonctionnalités essentielles.",time:"≈ 2 h",emoji:"🟣",color:"pink",lessons:["Présentation de Picsart","Découverte de l'interface","Créer son premier projet"]},
+{title:"Fondamentaux du design",desc:"Couleurs, typographie et composition graphique.",time:"≈ 3 h",emoji:"🎨",color:"green",lessons:["La couleur et les harmonies","La typographie","La composition visuelle"]},
+{title:"Retouche photographique",desc:"Améliorez vos photos comme un professionnel.",time:"≈ 4 h",emoji:"📷",color:"pink",lessons:["Importer et recadrer","Corriger la lumière et les couleurs","Détourer et changer le fond"]},
+{title:"Création graphique",desc:"Affiches, logos et bannières créatives.",time:"≈ 4 h",emoji:"🖼️",color:"orange",lessons:["Créer une affiche","Créer une bannière","Concevoir une identité visuelle"]},
+{title:"Picsart et création web",desc:"Créez des visuels adaptés à votre site.",time:"≈ 4 h",emoji:"💻",color:"blue",lessons:["Les images d'un site web","Créer une bannière d'accueil","Adapter les visuels au mobile"]},
+{title:"Exportation et projet final",desc:"Optimisez et intégrez vos créations.",time:"≈ 3 h",emoji:"⬇️",color:"blue",lessons:["Formats d'image","Optimiser les fichiers","Projet final"]}
+];
+const detail=[
+["Picsart est une plateforme de création graphique et de retouche. Elle permet de modifier des photos, composer des visuels et préparer des créations pour la communication numérique.","Repérez l'espace de création, les outils de retouche, le texte, les effets et l'exportation. L'interface peut varier selon la version et l'appareil.","Créez un projet, importez une image, ajoutez un titre, appliquez un effet simple puis exportez votre création."],
+["Les couleurs transmettent une ambiance. Une palette cohérente aide à construire une identité visuelle et à guider le regard.","Choisissez des polices lisibles et hiérarchisez titre, sous-titre et texte. L'alignement, les espaces et le contraste rendent une composition plus claire.","Réalisez une composition carrée avec trois couleurs harmonieuses, un titre, un sous-titre et une photographie."],
+["Commencez par choisir une image adaptée à son usage. Le recadrage permet de placer le sujet et d'éliminer les éléments inutiles.","Ajustez luminosité, contraste, saturation et température avec modération. Comparez avant/après pour éviter une retouche excessive.","Retouchez une photo, améliorez sa lumière et son contraste, recadrez-la et, si l'outil est disponible, retirez son arrière-plan."],
+["Une affiche présente une information principale, un visuel et des détails. Organisez les éléments selon leur importance.","Pour une bannière, utilisez un titre lisible, une image pertinente et un contraste suffisant. Évitez de surcharger l'espace.","Concevez une affiche ou une bannière pour annoncer une activité ou présenter un service."],
+["Les images d'un site renforcent sa présentation : bannière, illustrations de rubriques, couverture et visuels de cartes.","Préparez les images en tenant compte du cadrage responsive. Gardez les textes importants dans une zone sûre et vérifiez sur petit écran.","Créez une bannière d'accueil et trois images de sections dans une palette graphique cohérente."],
+["PNG convient notamment aux images avec transparence ; JPG aux photographies ; WebP peut réduire le poids des images web.","Adaptez les dimensions à l'affichage et compressez les images sans perte excessive de qualité. Gardez des noms de fichiers explicites.","Exportez vos créations, organisez-les dans un dossier et préparez les fichiers pour leur intégration au site."]];
+let completed=JSON.parse(localStorage.getItem("picsart_completed")||"[]");
+function save(){localStorage.setItem("picsart_completed",JSON.stringify(completed));updateProgress()}
+function updateProgress(){let n=completed.length,p=Math.round(n/6*100);document.getElementById("percent").textContent=p+"%";document.getElementById("count").textContent=n+" / 6 chapitres";document.getElementById("ring").style.background=`conic-gradient(#6b31e9 ${p}%,#e9eaf5 ${p}%)`; }
+function cardHTML(m,i){return `<div class="card module"><div class="thumb ${m.color}">${m.emoji}</div><div style="display:flex;flex-direction:column;flex:1"><span class="tag">Chapitre ${i+1}</span><h3>${m.title}</h3><p>${m.desc}</p><div class="meta"><span>◷ ${m.time}</span><button class="btn small" onclick="openLesson(${i})">${completed.includes(i)?'Revoir':'Commencer'} →</button></div></div></div>`}
+document.getElementById("moduleCards").innerHTML=modules.map(cardHTML).join("");
+document.getElementById("courseCards").innerHTML=modules.map(cardHTML).join("");
+const tps=["Première création","Composition graphique","Retouche photographique","Bannière professionnelle","Visuels d'une page d'accueil"];
+document.getElementById("tpCards").innerHTML=tps.map((t,i)=>`<div class="card" style="padding:18px"><span class="tag">TP ${i+1}</span><h3>${t}</h3><p class="notice">${["Importez une photo et ajoutez un titre.","Composez avec trois couleurs et une typographie lisible.","Corrigez la lumière et le cadrage d'une image.","Créez une bannière pour une page web.","Produisez une bannière et trois images de rubriques."][i]}</p><button class="btn small" onclick="document.getElementById('tpSelect').selectedIndex=${i};document.getElementById('fileInput').focus()">Faire ce TP →</button></div>`).join("");
+function openLesson(i){showPage("courses");document.getElementById("lessonNav").innerHTML=modules.map((m,j)=>`<button class="${i===j?'active':''}" onclick="openLesson(${j})">Chapitre ${j+1}<br><small>${m.title}</small></button>`).join("");let m=modules[i];document.getElementById("lessonContent").innerHTML=`<span class="tag">Chapitre ${i+1}</span><h2>${m.title}</h2><p>${m.desc}</p><h3>Objectifs d'apprentissage</h3><ul><li>Comprendre les notions essentielles du chapitre.</li><li>Identifier les outils Picsart adaptés au besoin.</li><li>Réaliser une création utile à un site web.</li></ul><h3>Leçon ${i+1}.1 — Notions et démarche</h3><p>${detail[i][0]}</p><h3>Leçon ${i+1}.2 — Méthode</h3><p>${detail[i][1]}</p><div class="callout"><b>À retenir</b><br>Travaillez progressivement, sauvegardez vos versions et vérifiez toujours la lisibilité de votre création.</div><h3>Leçon ${i+1}.3 — Mise en pratique</h3><p>${detail[i][2]}</p><h3>Activité de validation</h3><p>Réalisez l'exercice associé dans l'espace des travaux pratiques, puis revenez ici pour marquer le chapitre comme terminé.</p><button class="btn" onclick="complete(${i})">${completed.includes(i)?'✓ Chapitre terminé':'Valider le chapitre'}</button> <button class="btn secondary" onclick="showPage('tp')">Ouvrir les TP</button>`;document.getElementById("nexttitle").textContent="Chapitre "+(i+1);document.getElementById("nextname").textContent=m.title}
+function complete(i){if(!completed.includes(i)){completed.push(i);save()}openLesson(i);document.getElementById("lessonContent").insertAdjacentHTML("beforeend",'<p class="callout">Bravo ! Votre chapitre est marqué comme terminé sur cet appareil.</p>');if(window.currentLearnerId)syncLearnerCertification()}
+function showPage(id,el){document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));document.getElementById(id).classList.add("active");document.querySelectorAll(".side").forEach(s=>s.classList.remove("active"));if(el)el.classList.add("active");window.scrollTo({top:0,behavior:"smooth"})}
+document.getElementById("fileInput").addEventListener("change",e=>{let f=e.target.files[0];if(!f)return;let url=URL.createObjectURL(f);let im=document.getElementById("preview");im.src=url;im.hidden=false;document.getElementById("fileName").textContent=f.name});
+let deposits=JSON.parse(localStorage.getItem("picsart_deposits")||"[]");
+function renderDeposits(){document.getElementById("submissions").innerHTML=deposits.length?deposits.map(d=>`<p>✓ ${d.tp} — ${d.name} (${d.date})</p>`).join(""):"Aucun dépôt pour le moment."}
+function saveSubmission(){let f=document.getElementById("fileInput").files[0];if(!f){document.getElementById("submitMsg").textContent="Sélectionnez une image avant d'enregistrer.";return}deposits.push({tp:document.getElementById("tpSelect").value,name:f.name,date:new Date().toLocaleDateString("fr-FR")});localStorage.setItem("picsart_deposits",JSON.stringify(deposits));renderDeposits();document.getElementById("submitMsg").textContent="Dépôt enregistré dans cette démonstration (métadonnées locales)."}
+document.getElementById("quizForm").addEventListener("submit",e=>{e.preventDefault();let a=[document.querySelector('input[name=q1]:checked')?.value,document.querySelector('input[name=q2]:checked')?.value,document.querySelector('input[name=q3]:checked')?.value],score=a.filter((x,i)=>x===["b","a","b"][i]).length;localStorage.setItem("picsart_quiz_passed",score===3&&window.currentLearnerId?"yes":"no");let msg=score===3?"Excellent !":"Relisez les chapitres et réessayez.";if(score===3&&!window.currentLearnerId){msg="Ouvrez d’abord votre espace apprenant et saisissez votre nom complet, puis recommencez l’évaluation.";}else if(score===3){if(completed.length===6&&window.currentLearnerId){syncLearnerCertification();msg+=" Votre certificat est maintenant disponible dans votre espace apprenant.";}else if(completed.length<6){msg+=" Terminez les 6 chapitres pour obtenir votre certificat.";}else{msg+=" Ouvrez votre espace apprenant avec votre nom pour associer le résultat à votre inscription.";}}document.getElementById("quizResult").innerHTML=`<div class="callout"><b>Résultat : ${score}/3</b><br>${msg}</div>`});
+function markProject(){document.getElementById("projectMsg").textContent="Projet marqué comme terminé dans cette session pédagogique.";}
+
+const ADMIN_CODE="WADLEY2026";let students=JSON.parse(localStorage.getItem("mcp_students")||"[]");
+function toggleAdminCode(){const field=document.getElementById("adminCode");const button=field.parentElement.querySelector("button");const visible=field.type==="password";field.type=visible?"text":"password";button.textContent=visible?"🙈 Masquer":"👁 Afficher"}
+function adminLogin(){if(document.getElementById("adminCode").value===ADMIN_CODE){document.getElementById("adminGate").hidden=true;document.getElementById("adminPanel").hidden=false;renderStudents()}else document.getElementById("adminError").textContent="Code incorrect."}
+function addStudent(){let name=document.getElementById("studentName").value.trim();if(!name){document.getElementById("adminMsg").textContent="Saisissez un nom.";return}let id=document.getElementById("studentId").value.trim()||("APP-"+Date.now().toString().slice(-5));let s={id:id,name:name,email:document.getElementById("studentEmail").value.trim(),online:document.getElementById("studentOnline").value==="yes",progress:Math.min(100,Math.max(0,Number(document.getElementById("studentProgress").value)||0)),course:document.getElementById("studentCourse").value,date:document.getElementById("studentDate").value,certified:false};let ix=students.findIndex(x=>x.id===id);if(ix>=0)students[ix]=s;else students.push(s);localStorage.setItem("mcp_students",JSON.stringify(students));renderStudents();document.getElementById("adminMsg").textContent="Apprenant enregistré.";clearStudentForm()}
+function clearStudentForm(){["studentName","studentEmail","studentId","studentDate"].forEach(x=>document.getElementById(x).value="");document.getElementById("studentProgress").value=100}
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function renderStudents(){document.getElementById("statUsers").textContent=students.length;document.getElementById("statOnline").textContent=students.filter(s=>s.online).length;document.getElementById("statCerts").textContent=students.filter(s=>s.certified).length;document.getElementById("studentRows").innerHTML=students.map((s,i)=>`<tr><td>${esc(s.name)}</td><td>${esc(s.email||"—")}</td><td>${s.online?"Actif":"Inactif"}</td><td>${s.progress}%</td><td>${s.certified?"✓ Obtenu":"Non obtenu"}</td><td><button class="btn small" ${s.certified?"":"disabled"} onclick="previewStudent(${i})">${s.certified?"Consulter le certificat":"En attente"}</button> <button class="btn small secondary" onclick="deleteStudent(${i})">Supprimer</button></td></tr>`).join("")||'<tr><td colspan="6">Aucun apprenant.</td></tr>'}
+function previewStudent(i){let s=students[i];if(!s||!s.certified)return;document.getElementById("certName").textContent=s.name;document.getElementById("certDescription").textContent=`pour avoir suivi la formation « ${s.course} », validé les modules et réussi l'évaluation finale.`;document.getElementById("certDate").textContent="Décerné le "+(s.date?new Date(s.date+"T12:00:00").toLocaleDateString("fr-FR"):"—");document.getElementById("certificatePreview").scrollIntoView({behavior:"smooth",block:"center"})}
+function certifyStudent(i){students[i].certified=!students[i].certified;if(students[i].certified){students[i].progress=100;if(!students[i].date)students[i].date=new Date().toISOString().slice(0,10)}localStorage.setItem("mcp_students",JSON.stringify(students));renderStudents();previewStudent(i)}
+function deleteStudent(i){if(confirm("Supprimer cet apprenant ?")){students.splice(i,1);localStorage.setItem("mcp_students",JSON.stringify(students));renderStudents()}}
+function printCertificate(){let cert=document.getElementById("certificatePreview").outerHTML,w=window.open("","_blank");w.document.write(`<html><head><title>Certificat</title><style>body{padding:20px}.cert{border:10px solid #c9a34c;padding:32px;min-height:500px;text-align:center;color:#3b251c;font-family:Georgia,serif}.certbrand{color:#183d9c;font-size:19px;font-weight:bold}.certtitle{font-size:60px;color:#ad1118;font-weight:bold;margin:20px}.certsubtitle{font-size:25px;font-style:italic}.certname{font-size:48px;color:#b30b20;margin:28px;border-bottom:3px solid #c9a34c}.certtext{font-size:17px}.certbottom{display:flex;justify-content:space-between;margin-top:50px}.seal{width:118px;height:118px;border:4px double #163ab5;color:#163ab5;border-radius:50%;padding:12px 8px;outline:1px solid #163ab5;outline-offset:4px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font-size:13px;line-height:1.2;transform:rotate(-8deg)}.seal small{font-size:9px;letter-spacing:1px}.signature{min-width:190px;padding:5px;text-align:center}.signature .scribble{font-family:cursive;font-size:31px;font-style:italic;color:#172b75;display:block;transform:rotate(-7deg);border-bottom:1px solid #222;padding-bottom:5px}</style></head><body>${cert}<script>onload=()=>print()<\\/script></body></html>`);w.document.close()}
+
+function syncLearnerCertification(){
+ const id=window.currentLearnerId;
+ if(!id||completed.length<6||localStorage.getItem("picsart_quiz_passed")!=="yes")return false;
+ const s=students.find(x=>x.id===id);
+ if(!s||!s.online)return false;
+ if(!s.certified){s.certified=true;s.progress=100;s.date=new Date().toISOString().slice(0,10);localStorage.setItem("mcp_students",JSON.stringify(students));}
+ const panel=document.getElementById("learnerCertificate");
+ if(panel){panel.innerHTML='<p class="callout">✓ Félicitations ! Vous avez terminé les 6 chapitres et réussi l’évaluation. Votre certificat est disponible.</p><button class="btn" onclick="learnerCertificatePreview()">Voir et imprimer mon certificat</button><div id="learnerCertPreview"></div>';}
+ const adminPanel=document.getElementById("adminPanel");
+ if(adminPanel&&!adminPanel.hidden)renderStudents();
+ return true;
+}
+
+function learnerCertificatePreview(){
+ const s=students.find(x=>x.id===window.currentLearnerId);if(!s||!s.certified)return;
+ const date=s.date?new Date(s.date+"T12:00:00").toLocaleDateString("fr-FR"):"—";
+ document.getElementById("learnerCertPreview").innerHTML=`<div class="cert" style="margin-top:18px"><div class="certbrand">MARC COLBERT PIERRE<br><span style="font-size:14px">Marc Colbert Picsart Academy</span></div><div class="certtitle">CERTIFICAT</div><div class="certsubtitle">de formation · ${esc(s.course)}</div><p class="certtext">Ce certificat est fièrement décerné à</p><div class="certname">${esc(s.name)}</div><p class="certtext">pour avoir suivi le programme de formation, validé les modules et réussi le test final.</p><p>Décerné le ${date}</p><div class="certbottom"><div class="seal"><small>MARC COLBERT</small><b>MCP</b><span>✦</span><small>PICSART ACADEMY</small></div><div class="signature"><span class="scribble">Wadley Pierre</span><span>Administrateur</span></div></div></div><button class="btn" onclick="printLearnerCertificate()">Imprimer / enregistrer PDF</button>`;
+}
+function printLearnerCertificate(){
+ const el=document.querySelector("#learnerCertPreview .cert");if(!el)return;
+ const w=window.open("","_blank");w.document.write(`<html><head><title>Certificat</title><style>body{padding:20px}.cert{border:10px solid #c9a34c;padding:32px;min-height:500px;text-align:center;color:#3b251c;font-family:Georgia,serif}.certbrand{color:#183d9c;font-size:19px;font-weight:bold}.certtitle{font-size:60px;color:#ad1118;font-weight:bold;margin:20px}.certsubtitle{font-size:25px;font-style:italic}.certname{font-size:48px;color:#b30b20;margin:28px;border-bottom:3px solid #c9a34c}.certtext{font-size:17px}.certbottom{display:flex;justify-content:space-between;margin-top:50px}.seal{width:118px;height:118px;border:4px double #163ab5;border-radius:50%;outline:1px solid #163ab5;outline-offset:4px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#163ab5;transform:rotate(-8deg)}.seal small{font-size:9px}.signature{text-align:center;min-width:190px}.scribble{font-family:cursive;font-size:31px;font-style:italic;color:#172b75;display:block;transform:rotate(-7deg);border-bottom:1px solid #222;padding-bottom:5px}</style></head><body>${el.outerHTML}<script>onload=()=>print()<\\/script></body></html>`);w.document.close();
+}
+
+updateProgress();renderDeposits();
+if(document.getElementById("adminPanel"))document.getElementById("adminPanel").hidden=true;
+</script>
+</body></html>
